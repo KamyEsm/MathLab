@@ -287,8 +287,9 @@
                   <Button layoutX="489.0" layoutY="330.0" mnemonicParsing="false" onAction="#PMod" prefHeight="50.0" prefWidth="60.0" text="Mod" />
                   <Button layoutX="559.0" layoutY="330.0" mnemonicParsing="false" onAction="#PDerivative" prefHeight="50.0" prefWidth="60.0" text="Der" />
                   <Button layoutX="629.0" layoutY="330.0" mnemonicParsing="false" onAction="#PIntegral" prefHeight="50.0" prefWidth="60.0" text="Int" />
-                  <Button layoutX="209.0" layoutY="390.0" mnemonicParsing="false" onAction="#PDerivative" prefHeight="50.0" prefWidth="232.0" text="Delete" />
-                  <Button layoutX="451.0" layoutY="390.0" mnemonicParsing="false" onAction="#PIntegral" prefHeight="50.0" prefWidth="238.0" text="Clear" />
+                  <Button layoutX="209.0" layoutY="390.0" mnemonicParsing="false" onAction="#PDelete" prefHeight="50.0" prefWidth="232.0" text="Delete" />
+                  <Button layoutX="451.0" layoutY="390.0" mnemonicParsing="false" onAction="#PClear" prefHeight="50.0" prefWidth="238.0" text="Clear" />
+                  <Button layoutX="327.0" layoutY="455.0" mnemonicParsing="false" onAction="#PEquals" prefHeight="50.0" prefWidth="238.0" text="Equals" />
                </children></AnchorPane>
       </content>
     </TitledPane>

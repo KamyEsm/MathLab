@@ -319,6 +319,201 @@ public class HelloController {
     }
 
 
+    /// ///////////////////////////////////////////////////////////////////////////////Polynomial
+    private String FirstP="";
+    private String SecondP="";
+    private boolean T=false;
+    @FXML
+    private TextArea PResult;
+
+
+    public void PSet0(ActionEvent actionEvent) {
+        if(!T) {
+            FirstP += '0';
+            PResult.setText(FirstP);
+        }
+
+        else {
+            SecondP += '0';
+            PResult.setText(SecondP);
+        }
+    }
+
+    public void PSet1(ActionEvent actionEvent) {
+        if(!T) {
+            FirstP += '1';
+            PResult.setText(FirstP);
+        }
+        else {
+            SecondP += '1';
+            PResult.setText(SecondP);
+        }
+    }
+
+    public void PSet2(ActionEvent actionEvent) {
+        if(!T) {
+            FirstP += '2';
+            PResult.setText(FirstP);
+        }
+        else {
+            SecondP += '2';
+            PResult.setText(SecondP);
+        }
+    }
+
+    public void PSet3(ActionEvent actionEvent) {
+        if(!T) {
+            FirstP += '3';
+            PResult.setText(FirstP);
+        }
+        else {
+            SecondP += '3';
+            PResult.setText(SecondP);
+        }
+    }
+
+    public void PSet4(ActionEvent actionEvent) {
+        if(!T) {
+            FirstP += '4';
+            PResult.setText(FirstP);
+        }
+        else {
+            SecondP += '4';
+            PResult.setText(SecondP);
+        }
+    }
+
+    public void PSet5(ActionEvent actionEvent) {
+        if(!T) {
+            FirstP += '5';
+            PResult.setText(FirstP);
+        }
+        else {
+            SecondP += '5';
+            PResult.setText(SecondP);
+        }
+    }
+
+    public void PSet6(ActionEvent actionEvent) {
+        if(!T) {
+            FirstP += '6';
+            PResult.setText(FirstP);
+        }
+        else {
+            SecondP += '6';
+            PResult.setText(SecondP);
+        }
+    }
+
+    public void PSet7(ActionEvent actionEvent) {
+        if(!T) {
+            FirstP += '7';
+            PResult.setText(FirstP);
+        }
+        else {
+            SecondP += '7';
+            PResult.setText(SecondP);
+        }
+    }
+
+    public void PSet8(ActionEvent actionEvent) {
+        if(!T) {
+            FirstP += '8';
+            PResult.setText(FirstP);
+        }
+        else {
+            SecondP += '8';
+            PResult.setText(SecondP);
+        }
+    }
+
+    public void PSet9(ActionEvent actionEvent) {
+        if(!T) {
+            FirstP += '9';
+            PResult.setText(FirstP);
+        }
+        else {
+            SecondP += '9';
+            PResult.setText(SecondP);
+        }
+    }
+
+    public void PSetX(ActionEvent actionEvent) {
+        if(!T) {
+            if (FirstP.charAt(FirstP.length() - 1) != '^')
+                FirstP += 'X';
+            PResult.setText(FirstP);
+        }
+        else {
+            if (SecondP.charAt(SecondP.length() - 1) != '^')
+                SecondP += 'X';
+            PResult.setText(SecondP);
+        }
+    }
+
+    public void PSetPowSign(ActionEvent actionEvent) {
+        if(!T) {
+            FirstP += '^';
+            PResult.setText(FirstP);
+        }
+        else {
+            SecondP += '^';
+            PResult.setText(SecondP);
+        }
+    }
+
+    public void PSetPlusSign(ActionEvent actionEvent) {
+        if (!T){
+            FirstP += '+';
+            PResult.setText(FirstP);
+        }
+        else {
+            SecondP += '+';
+            PResult.setText(SecondP);
+        }
+    }
+
+    public void PSetMinusSign(ActionEvent actionEvent) {
+        if (!T){
+            FirstP += '-';
+            PResult.setText(FirstP);
+        }
+        else {
+            SecondP += '-';
+            PResult.setText(SecondP);
+        }
+    }
+
+    public void PSum(ActionEvent actionEvent) {
+    }
+
+    public void PMinus(ActionEvent actionEvent) {
+    }
+
+    public void PPower(ActionEvent actionEvent) {
+    }
+
+    public void PDiv(ActionEvent actionEvent) {
+    }
+
+    public void PMod(ActionEvent actionEvent) {
+    }
+
+    public void PDerivative(ActionEvent actionEvent) {
+    }
+
+    public void PIntegral(ActionEvent actionEvent) {
+    }
+
+    public void PDelete(ActionEvent actionEvent) {
+    }
+
+    public void PClear(ActionEvent actionEvent) {
+    }
+
+    public void PEquals(ActionEvent actionEvent) {
+    }
+
 
     /// /////////////////////////////////////////////////////////Polynomial
 
