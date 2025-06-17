@@ -2,10 +2,15 @@ package com.example.mathlab;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
-public class HelloController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class HelloController implements Initializable {
     /// ///////////////////////////////////////////BigInt
 
     @FXML
@@ -320,168 +325,92 @@ public class HelloController {
 
 
     /// ///////////////////////////////////////////////////////////////////////////////Polynomial
-    private String FirstP="";
-    private String SecondP="";
-    private boolean T=false;
     @FXML
     private TextArea PResult;
+    @FXML
+    private TextArea Polynomial1;
+    @FXML
+    private TextArea Polynomial2;
+    @FXML
+    private ComboBox<String> Operation1;
+    private boolean FirstOrSecond=false;
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        Operation1.getItems().addAll("Sum","Minus","Multiple","Division","Power","Mod","Derivative","Integral");
+    }
+
+    public void ComboAction(ActionEvent actionEvent) {
+        if(Operation1.getSelectionModel().getSelectedItem().equals("Derivative") || Operation1.getSelectionModel().getSelectedItem().equals("Integral"))
+            Polynomial1.setVisible(false);
+        else
+            Polynomial1.setVisible(true);
+    }
+
+    public void PEnter(ActionEvent actionEvent) {
+        if(FirstOrSecond) FirstOrSecond=false;
+        else FirstOrSecond=true;
+    }
 
     public void PSet0(ActionEvent actionEvent) {
-        if(!T) {
-            FirstP += '0';
-            PResult.setText(FirstP);
-        }
 
-        else {
-            SecondP += '0';
-            PResult.setText(SecondP);
-        }
     }
 
     public void PSet1(ActionEvent actionEvent) {
-        if(!T) {
-            FirstP += '1';
-            PResult.setText(FirstP);
-        }
-        else {
-            SecondP += '1';
-            PResult.setText(SecondP);
-        }
+
     }
 
     public void PSet2(ActionEvent actionEvent) {
-        if(!T) {
-            FirstP += '2';
-            PResult.setText(FirstP);
-        }
-        else {
-            SecondP += '2';
-            PResult.setText(SecondP);
-        }
+
     }
 
     public void PSet3(ActionEvent actionEvent) {
-        if(!T) {
-            FirstP += '3';
-            PResult.setText(FirstP);
-        }
-        else {
-            SecondP += '3';
-            PResult.setText(SecondP);
-        }
+
     }
 
     public void PSet4(ActionEvent actionEvent) {
-        if(!T) {
-            FirstP += '4';
-            PResult.setText(FirstP);
-        }
-        else {
-            SecondP += '4';
-            PResult.setText(SecondP);
-        }
+
     }
 
     public void PSet5(ActionEvent actionEvent) {
-        if(!T) {
-            FirstP += '5';
-            PResult.setText(FirstP);
-        }
-        else {
-            SecondP += '5';
-            PResult.setText(SecondP);
-        }
+
     }
 
     public void PSet6(ActionEvent actionEvent) {
-        if(!T) {
-            FirstP += '6';
-            PResult.setText(FirstP);
-        }
-        else {
-            SecondP += '6';
-            PResult.setText(SecondP);
-        }
+
+
     }
 
     public void PSet7(ActionEvent actionEvent) {
-        if(!T) {
-            FirstP += '7';
-            PResult.setText(FirstP);
-        }
-        else {
-            SecondP += '7';
-            PResult.setText(SecondP);
-        }
+
     }
 
     public void PSet8(ActionEvent actionEvent) {
-        if(!T) {
-            FirstP += '8';
-            PResult.setText(FirstP);
-        }
-        else {
-            SecondP += '8';
-            PResult.setText(SecondP);
-        }
+
     }
 
     public void PSet9(ActionEvent actionEvent) {
-        if(!T) {
-            FirstP += '9';
-            PResult.setText(FirstP);
-        }
-        else {
-            SecondP += '9';
-            PResult.setText(SecondP);
-        }
+
     }
 
     public void PSetX(ActionEvent actionEvent) {
-        if(!T) {
-            if (FirstP.charAt(FirstP.length() - 1) != '^')
-                FirstP += 'X';
-            PResult.setText(FirstP);
-        }
-        else {
-            if (SecondP.charAt(SecondP.length() - 1) != '^')
-                SecondP += 'X';
-            PResult.setText(SecondP);
-        }
+
     }
 
     public void PSetPowSign(ActionEvent actionEvent) {
-        if(!T) {
-            FirstP += '^';
-            PResult.setText(FirstP);
-        }
-        else {
-            SecondP += '^';
-            PResult.setText(SecondP);
-        }
+
     }
 
     public void PSetPlusSign(ActionEvent actionEvent) {
-        if (!T){
-            FirstP += '+';
-            PResult.setText(FirstP);
-        }
-        else {
-            SecondP += '+';
-            PResult.setText(SecondP);
-        }
     }
 
     public void PSetMinusSign(ActionEvent actionEvent) {
-        if (!T){
-            FirstP += '-';
-            PResult.setText(FirstP);
-        }
-        else {
-            SecondP += '-';
-            PResult.setText(SecondP);
-        }
+    }
+
+    public void PLParenthesis(ActionEvent actionEvent) {
+    }
+
+    public void PRParenthesis(ActionEvent actionEvent) {
     }
 
     public void PSum(ActionEvent actionEvent) {
@@ -513,9 +442,6 @@ public class HelloController {
 
     public void PEquals(ActionEvent actionEvent) {
     }
-
-
-    /// /////////////////////////////////////////////////////////Polynomial
 
 
 
