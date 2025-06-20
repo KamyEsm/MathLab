@@ -325,12 +325,14 @@ public class HelloController implements Initializable {
 
 
     /// ///////////////////////////////////////////////////////////////////////////////Polynomial
+    private String Polynomial1="0";
+    private String Polynomial2="0";
     @FXML
     private TextArea PResult;
     @FXML
-    private TextArea Polynomial1;
+    private TextArea Polynomial1TextArea;
     @FXML
-    private TextArea Polynomial2;
+    private TextArea Polynomial2TextArea;
     @FXML
     private ComboBox<String> Operation1;
     private boolean FirstOrSecond=false;
@@ -342,9 +344,9 @@ public class HelloController implements Initializable {
 
     public void ComboAction(ActionEvent actionEvent) {
         if(Operation1.getSelectionModel().getSelectedItem().equals("Derivative") || Operation1.getSelectionModel().getSelectedItem().equals("Integral"))
-            Polynomial1.setVisible(false);
+            Polynomial1TextArea.setVisible(false);
         else
-            Polynomial1.setVisible(true);
+            Polynomial1TextArea.setVisible(true);
     }
 
     public void PEnter(ActionEvent actionEvent) {
@@ -353,7 +355,12 @@ public class HelloController implements Initializable {
     }
 
     public void PSet0(ActionEvent actionEvent) {
+        if(FirstOrSecond){
 
+        }
+        else {
+
+        }
     }
 
     public void PSet1(ActionEvent actionEvent) {
