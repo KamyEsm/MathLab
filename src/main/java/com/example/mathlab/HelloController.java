@@ -339,7 +339,7 @@ public class HelloController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Operation1.getItems().addAll("Sum","Minus","Multiple","Division","Power","Mod","Derivative","Integral");
+        Operation1.getItems().addAll("Sum","Minus","Multiple","Division","Mod","Derivative","Integral");
         Operation1.getSelectionModel().selectFirst();
         Polynomial1TextArea.setText(Polynomial1);
         Polynomial2TextArea.setText(Polynomial2);
@@ -674,9 +674,53 @@ public class HelloController implements Initializable {
     }
 
     public void PEquals(ActionEvent actionEvent) {
-
+        if(Operation1.getSelectionModel().getSelectedItem().equals("Sum")){
+            Polynomial P1 = new Polynomial(Polynomial1);
+            Polynomial P2 = new Polynomial(Polynomial2);
+            Polynomial R = new Polynomial();
+            R.PSum(P1, P2);
+            PResult.setText(R.toString());
+        }
+        else if (Operation1.getSelectionModel().getSelectedItem().equals("Minus")) {
+            Polynomial P1 = new Polynomial(Polynomial1);
+            Polynomial P2 = new Polynomial(Polynomial2);
+            Polynomial R = new Polynomial();
+            R.PMinus(P1, P2);
+            PResult.setText(R.toString());
+        }
+        else if (Operation1.getSelectionModel().getSelectedItem().equals("Multiple")) {
+            Polynomial P1 = new Polynomial(Polynomial1);
+            Polynomial P2 = new Polynomial(Polynomial2);
+            Polynomial R = new Polynomial();
+            R.PMultiple(P1, P2);
+            PResult.setText(R.toString());
+        }
+        else if (Operation1.getSelectionModel().getSelectedItem().equals("Division")) {
+            Polynomial P1 = new Polynomial(Polynomial1);
+            Polynomial P2 = new Polynomial(Polynomial2);
+            Polynomial R = new Polynomial();
+            R.PDiv(P1, P2);
+            PResult.setText(R.toString());
+        }
+        else if (Operation1.getSelectionModel().getSelectedItem().equals("Mod")) {
+            Polynomial P1 = new Polynomial(Polynomial1);
+            Polynomial P2 = new Polynomial(Polynomial2);
+            Polynomial R = new Polynomial();
+            R.PMoD(P1, P2);
+            PResult.setText(R.toString());
+        }
+        else if (Operation1.getSelectionModel().getSelectedItem().equals("Derivative")) {
+        Polynomial P1 = new Polynomial(Polynomial2);
+        Polynomial P2 = new Polynomial();
+        P2.PDerivative(P1);
+        PResult.setText(P2.toString());
+        }
+        else if (Operation1.getSelectionModel().getSelectedItem().equals("Integral")) {
+            Polynomial P1 = new Polynomial(Polynomial2);
+            P1.PIntegral(P1);
+            PResult.setText(P1.toString());
+        }
     }
-
 
 
 }///class
