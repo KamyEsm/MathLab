@@ -340,6 +340,7 @@ public class HelloController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Operation1.getItems().addAll("Sum","Minus","Multiple","Division","Power","Mod","Derivative","Integral");
+        Operation1.getSelectionModel().selectFirst();
         Polynomial1TextArea.setText(Polynomial1);
         Polynomial2TextArea.setText(Polynomial2);
         PResult.setText("0");
@@ -583,23 +584,97 @@ public class HelloController implements Initializable {
     }
 
     public void PSetX(ActionEvent actionEvent) {
+        if(FirstOrSecond){
+            if (Polynomial2.equals("0")){
+                Polynomial2="x";
+                Polynomial2TextArea.setText(Polynomial2);
+                return;
+            }
+            Polynomial2+='x';
+            Polynomial2TextArea.setText(Polynomial2);
+        }
+        else {
+            if (Polynomial1.equals("0")){
+                Polynomial1="x";
+                Polynomial1TextArea.setText(Polynomial1);
+                return;
+            }
+            Polynomial1+='x';
+            Polynomial1TextArea.setText(Polynomial1);
+        }
     }
 
     public void PSetPowSign(ActionEvent actionEvent) {
+        if(FirstOrSecond){
+            if (Polynomial2.equals("0")) return;
+            int t=Polynomial2.length()-1;
+            if(Polynomial2.charAt(t)=='-' || Polynomial2.charAt(t)=='+' || Polynomial2.charAt(t)=='^') return;
+            Polynomial2+='^';
+            Polynomial2TextArea.setText(Polynomial2);
+        }
+        else {
+            if (Polynomial1.equals("0")) return;
+            int t=Polynomial1.length()-1;
+            if(Polynomial1.charAt(t)=='-' || Polynomial1.charAt(t)=='+' || (Polynomial1.charAt(t)>='0' && Polynomial1.charAt(t)<='9')) return;
+            Polynomial1+='^';
+            Polynomial1TextArea.setText(Polynomial1);
+        }
 
     }
 
     public void PSetPlusSign(ActionEvent actionEvent) {
+        if(FirstOrSecond){
+            if (Polynomial2.equals("0")) return;
+            int t=Polynomial2.length()-1;
+            if(Polynomial2.charAt(t)=='+' || Polynomial2.charAt(t)=='-' || Polynomial2.charAt(t)=='^')
+                return;
+            Polynomial2+='+';
+            Polynomial2TextArea.setText(Polynomial2);
+        }
+        else {
+            if (Polynomial1.equals("0")) return;
+            int t=Polynomial1.length()-1;
+            if(Polynomial1.charAt(t)=='+' || Polynomial1.charAt(t)=='-' || Polynomial1.charAt(t)=='^')
+                return;
+            Polynomial1+='+';
+            Polynomial1TextArea.setText(Polynomial1);
+        }
     }
 
     public void PSetMinusSign(ActionEvent actionEvent) {
+        if(FirstOrSecond){
+            if (Polynomial2.equals("0")) return;
+            int t=Polynomial2.length()-1;
+            if(Polynomial2.charAt(t)=='+' || Polynomial2.charAt(t)=='-' || Polynomial2.charAt(t)=='^')
+                return;
+            Polynomial2+='-';
+            Polynomial2TextArea.setText(Polynomial2);
+        }
+        else {
+            if (Polynomial1.equals("0")) return;
+            int t=Polynomial1.length()-1;
+            if(Polynomial1.charAt(t)=='+' || Polynomial1.charAt(t)=='-' || Polynomial1.charAt(t)=='^')
+                return;
+            Polynomial1+='-';
+            Polynomial1TextArea.setText(Polynomial1);
+        }
     }
 
 
     public void PClear(ActionEvent actionEvent) {
+        if(FirstOrSecond){
+            Polynomial2="0";
+            Polynomial2TextArea.setText(Polynomial2);
+        }
+        else {
+            Polynomial1="0";
+            Polynomial1TextArea.setText(Polynomial1);
+        }
+        if(Polynomial1.equals("0") && Polynomial2.equals("0")) ResultText.setText("0");
     }
 
     public void PEquals(ActionEvent actionEvent) {
+
     }
 
 
