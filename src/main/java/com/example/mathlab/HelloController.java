@@ -340,6 +340,9 @@ public class HelloController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Operation1.getItems().addAll("Sum","Minus","Multiple","Division","Power","Mod","Derivative","Integral");
+        Polynomial1TextArea.setText(Polynomial1);
+        Polynomial2TextArea.setText(Polynomial2);
+        PResult.setText("0");
     }
 
     public void ComboAction(ActionEvent actionEvent) {
@@ -356,52 +359,230 @@ public class HelloController implements Initializable {
 
     public void PSet0(ActionEvent actionEvent) {
         if(FirstOrSecond){
-
+            if (Polynomial2.equals("0")) return;
+            Polynomial2+='0';
+            Polynomial2TextArea.setText(Polynomial2);
         }
         else {
-
+            if (Polynomial1.equals("0")) return;
+            Polynomial1+='0';
+            Polynomial1TextArea.setText(Polynomial1);
         }
     }
 
     public void PSet1(ActionEvent actionEvent) {
-
+        if(FirstOrSecond){
+            if (Polynomial2.equals("0")){
+                Polynomial2="1";
+                Polynomial2TextArea.setText(Polynomial2);
+                return;
+            }
+            Polynomial2+='1';
+            Polynomial2TextArea.setText(Polynomial2);
+        }
+        else {
+            if (Polynomial1.equals("0")){
+                Polynomial1="1";
+                Polynomial1TextArea.setText(Polynomial1);
+                return;
+            }
+            Polynomial1+='1';
+            Polynomial1TextArea.setText(Polynomial1);
+        }
     }
 
     public void PSet2(ActionEvent actionEvent) {
-
+        if(FirstOrSecond){
+            if (Polynomial2.equals("0")){
+                Polynomial2="2";
+                Polynomial2TextArea.setText(Polynomial2);
+                return;
+            }
+            Polynomial2+='2';
+            Polynomial2TextArea.setText(Polynomial2);
+        }
+        else {
+            if (Polynomial1.equals("0")){
+                Polynomial1="2";
+                Polynomial1TextArea.setText(Polynomial1);
+                return;
+            }
+            Polynomial1+='2';
+            Polynomial1TextArea.setText(Polynomial1);
+        }
     }
 
     public void PSet3(ActionEvent actionEvent) {
-
+        if(FirstOrSecond){
+            if (Polynomial2.equals("0")){
+                Polynomial2="3";
+                Polynomial2TextArea.setText(Polynomial2);
+                return;
+            }
+            Polynomial2+='3';
+            Polynomial2TextArea.setText(Polynomial2);
+        }
+        else {
+            if (Polynomial1.equals("0")){
+                Polynomial1="3";
+                Polynomial1TextArea.setText(Polynomial1);
+                return;
+            }
+            Polynomial1+='3';
+            Polynomial1TextArea.setText(Polynomial1);
+        }
     }
 
     public void PSet4(ActionEvent actionEvent) {
-
+        if(FirstOrSecond){
+            if (Polynomial2.equals("0")){
+                Polynomial2="4";
+                Polynomial2TextArea.setText(Polynomial2);
+                return;
+            }
+            Polynomial2+='4';
+            Polynomial2TextArea.setText(Polynomial2);
+        }
+        else {
+            if (Polynomial1.equals("0")){
+                Polynomial1="4";
+                Polynomial1TextArea.setText(Polynomial1);
+                return;
+            }
+            Polynomial1+='4';
+            Polynomial1TextArea.setText(Polynomial1);
+        }
     }
 
     public void PSet5(ActionEvent actionEvent) {
-
+        if(FirstOrSecond){
+            if (Polynomial2.equals("0")){
+                Polynomial2="5";
+                Polynomial2TextArea.setText(Polynomial2);
+                return;
+            }
+            Polynomial2+='5';
+            Polynomial2TextArea.setText(Polynomial2);
+        }
+        else {
+            if (Polynomial1.equals("0")){
+                Polynomial1="5";
+                Polynomial1TextArea.setText(Polynomial1);
+                return;
+            }
+            Polynomial1+='5';
+            Polynomial1TextArea.setText(Polynomial1);
+        }
     }
 
     public void PSet6(ActionEvent actionEvent) {
-
-
+        if(FirstOrSecond){
+            if (Polynomial2.equals("0")){
+                Polynomial2="6";
+                Polynomial2TextArea.setText(Polynomial2);
+                return;
+            }
+            Polynomial2+='6';
+            Polynomial2TextArea.setText(Polynomial2);
+        }
+        else {
+            if (Polynomial1.equals("0")){
+                Polynomial1="6";
+                Polynomial1TextArea.setText(Polynomial1);
+                return;
+            }
+            Polynomial1+='6';
+            Polynomial1TextArea.setText(Polynomial1);
+        }
     }
 
     public void PSet7(ActionEvent actionEvent) {
-
+        if(FirstOrSecond){
+            if (Polynomial2.equals("0")){
+                Polynomial2="7";
+                Polynomial2TextArea.setText(Polynomial2);
+                return;
+            }
+            Polynomial2+='7';
+            Polynomial2TextArea.setText(Polynomial2);
+        }
+        else {
+            if (Polynomial1.equals("0")){
+                Polynomial1="7";
+                Polynomial1TextArea.setText(Polynomial1);
+                return;
+            }
+            Polynomial1+='7';
+            Polynomial1TextArea.setText(Polynomial1);
+        }
     }
 
     public void PSet8(ActionEvent actionEvent) {
-
+        if(FirstOrSecond){
+            if (Polynomial2.equals("0")){
+                Polynomial2="8";
+                Polynomial2TextArea.setText(Polynomial2);
+                return;
+            }
+            Polynomial2+='8';
+            Polynomial2TextArea.setText(Polynomial2);
+        }
+        else {
+            if (Polynomial1.equals("0")){
+                Polynomial1="8";
+                Polynomial1TextArea.setText(Polynomial1);
+                return;
+            }
+            Polynomial1+='8';
+            Polynomial1TextArea.setText(Polynomial1);
+        }
     }
 
     public void PSet9(ActionEvent actionEvent) {
+        if(FirstOrSecond){
+            if (Polynomial2.equals("0")){
+                Polynomial2="9";
+                Polynomial2TextArea.setText(Polynomial2);
+                return;
+            }
+            Polynomial2+='9';
+            Polynomial2TextArea.setText(Polynomial2);
+        }
+        else {
+            if (Polynomial1.equals("0")){
+                Polynomial1="9";
+                Polynomial1TextArea.setText(Polynomial1);
+                return;
+            }
+            Polynomial1+='9';
+            Polynomial1TextArea.setText(Polynomial1);
+        }
+    }
 
+    public void PDelete(ActionEvent actionEvent) {
+        if(FirstOrSecond){
+            if (Polynomial2.equals("0")) return;
+            Polynomial2=Polynomial2.substring(0,Polynomial2.length()-1);
+            if(Polynomial2.equals("")) {
+                Polynomial2="0";
+                Polynomial2TextArea.setText(Polynomial2);
+                return;
+            }
+            Polynomial2TextArea.setText(Polynomial2);
+        }
+        else {
+            if (Polynomial1.equals("0")) return;
+            Polynomial1=Polynomial1.substring(0,Polynomial1.length()-1);
+            if(Polynomial1.equals("")) {
+                Polynomial1="0";
+                Polynomial1TextArea.setText(Polynomial1);
+                return;
+            }
+            Polynomial1TextArea.setText(Polynomial1);
+        }
     }
 
     public void PSetX(ActionEvent actionEvent) {
-
     }
 
     public void PSetPowSign(ActionEvent actionEvent) {
@@ -414,35 +595,6 @@ public class HelloController implements Initializable {
     public void PSetMinusSign(ActionEvent actionEvent) {
     }
 
-    public void PLParenthesis(ActionEvent actionEvent) {
-    }
-
-    public void PRParenthesis(ActionEvent actionEvent) {
-    }
-
-    public void PSum(ActionEvent actionEvent) {
-    }
-
-    public void PMinus(ActionEvent actionEvent) {
-    }
-
-    public void PPower(ActionEvent actionEvent) {
-    }
-
-    public void PDiv(ActionEvent actionEvent) {
-    }
-
-    public void PMod(ActionEvent actionEvent) {
-    }
-
-    public void PDerivative(ActionEvent actionEvent) {
-    }
-
-    public void PIntegral(ActionEvent actionEvent) {
-    }
-
-    public void PDelete(ActionEvent actionEvent) {
-    }
 
     public void PClear(ActionEvent actionEvent) {
     }

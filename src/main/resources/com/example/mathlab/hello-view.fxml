@@ -283,12 +283,12 @@
                   <Button layoutX="628.0" layoutY="296.0" mnemonicParsing="false" onAction="#PSetMinusSign" prefHeight="50.0" prefWidth="60.0" text="-" />
                   <Button layoutX="208.0" layoutY="356.0" mnemonicParsing="false" onAction="#PDelete" prefHeight="50.0" prefWidth="232.0" text="Delete" />
                   <Button layoutX="450.0" layoutY="356.0" mnemonicParsing="false" onAction="#PClear" prefHeight="50.0" prefWidth="238.0" text="Clear" />
-                  <TextArea fx:id="Polynomial2" editable="false" layoutX="208.0" layoutY="100.0" prefHeight="56.0" prefWidth="480.0" wrapText="true">
+                  <TextArea fx:id="Polynomial2TextArea" editable="false" layoutX="208.0" layoutY="100.0" prefHeight="56.0" prefWidth="480.0" wrapText="true">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </TextArea>
-                  <TextArea fx:id="Polynomial1" editable="false" layoutX="210.0" layoutY="32.0" prefHeight="56.0" prefWidth="480.0" wrapText="true">
+                  <TextArea fx:id="Polynomial1TextArea" editable="false" layoutX="210.0" layoutY="32.0" prefHeight="56.0" prefWidth="480.0" wrapText="true">
                      <font>
                         <Font size="18.0" />
                      </font>
